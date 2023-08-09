@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости сегодня!</title>
+</head>
+<body>
+    {% for new in news %}
+        <article>
+            <h3>{{ new.heading }}</h3>
+            <p>{{ new.description }}</p>
+            <p>Опубликовано: <time>{{ new.datePublished }}</time> </p>
+        </article>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/css/task_9.css">
+        <title>
+            {% block title %}
+                Мой сайт
+            {% endblock %}
+        </title>
+    </head>
+    <body>
+        <header class="header">
+            <img src="/static/image/Logo.png" alt="Логотип" >
+            <div class="container-fluid">
+                <ul class="nav">    
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/clothes/">Одежда</a></li>
+                    <li><a href="/footwear/">Обувь</a></li>
+                </ul>
+            </div>
+        </header>
+        <main class="main">
+            {% block content %}
+                <!-- Страница не заполнена -->
+            {% endblock %}
+        </main>
+        <footer class="footer">
+            <p>ООО «ГикБреинс», 125167, г. Москва, Ленинградский пр-кт, д. 39, стр. 79, этаж 23, пом. XXXIV, часть комнаты 1<br> &copy;  GeekBrains, 2023</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    {{ super() }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+    <body>
+        <div class="container">
+            <a href="/footwear/winter shoes/"><img src="/static/image/valenki.jpg" alt="Валенки" title="Зимняя обувь" width="200" height="200"><br><p>Зимняя обувь</p></a>
+            <a href="/footwear/summer shoes/"><img src="/static/image/vyetnamki.jpg" alt="Вьетнамки" title="Летняя обувь" width="200" height="200"><br><p>Летняя обувь</p></a>
+        </div>
+    </body>
+{% endblock %}

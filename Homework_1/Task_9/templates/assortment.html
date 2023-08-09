@@ -1,0 +1,29 @@
+{% extends 'clothes.html' %}
+
+{% block title %}
+    {{ super() }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <p><h1>{{ title }}</h1></p>
+    <table>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>size</th>
+                <th>price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for assortment in assortments %}
+                <tr>
+                    <td>{{ assortment.name }}</td>
+                    <td>{{ assortment.size }}</td>
+                    <td>{{ assortment.price }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

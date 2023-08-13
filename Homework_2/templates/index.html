@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_6 Index</title>
+</head>
+<body>
+    {% if error %}
+    <h2>Ошибка! в задании № 6 введен не корректный возраст!</h2>
+    {% endif %}
+    <h2>Задание №6</h2>
+    <p>* Создать страницу, на которой будет форма для ввода имени и возраста пользователя и кнопка "Отправить"</p>
+    <p>* При нажатии на кнопку будет произведена проверка возраста и переход на страницу с результатом или на страницу с ошибкой в случае некорректного возраста.</p>
+    <form action="/check/" method="post">
+        <input type="text" placeholder="Введите имя" name="name"><br><br>
+        <input type="number" placeholder="Введите возраст" name="age"><br><br>
+        <!-- <select name="age" required>
+            <option value="" disabled selected>Введите возраст</option>
+            {% for num in range(1, 101) %}
+                <option value="{{ num }}">{{ num }}</option>
+            {% endfor %}
+           </select><br><br> -->
+        <input type=submit value=Отправить>
+    </form><br>
+    <h2>Задание №7</h2>
+    <p>* Создать страницу, на которой будет форма для ввода числа и кнопка "Отправить"</p>
+    <p>* При нажатии на кнопку будет произведено перенаправление на страницу с результатом, где будет выведено введенное число и его квадрат.</p>
+    <form action="/square number/" method="post">
+        <input type="number" placeholder="Введите число" name="number"><br><br>
+        <input type=submit value=Отправить>
+    </form>
+    <h2>Задание №8</h2>
+    <p>* Создать страницу, на которой будет форма для ввода имени и кнопка "Отправить"</p>
+    <p>* При нажатии на кнопку будет произведено перенаправление на страницу с flash сообщением, где будет выведено "Привет, {имя}!".</p>
+    <form action="/flash/" method="post">
+        <input type="text" placeholder="Введите имя" name="name"><br><br>
+        <input type=submit value=Отправить>
+    </form>
+    <h2>Задание №9</h2>
+    <p>* Создать страницу, на которой будет форма для ввода имени и электронной почты</p>
+    <p>* При отправке которой будет создан cookie файл с данными пользователя</p>
+    <p>* Также будет произведено перенаправление на страницу приветствия, где будет отображаться имя пользователя.</p>
+    <p>* На странице приветствия должна быть кнопка "Выйти"</p>
+    <p>* При нажатии на кнопку будет удален cookie файл с данными пользователя и произведено перенаправление на страницу ввода имени и электронной почты.</p>
+    <form action="/create cookie/" method="post">
+        <input type="text" placeholder="Введите имя" name="name"><br><br>
+        <input type="email" placeholder="Введите почту" name="email"><br><br>
+        <input type=submit value=Отправить>
+    </form>
+</body>
+</html>
